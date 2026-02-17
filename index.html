@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Financial - Dashboard</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="app-root" class="d-flex">
+
+        <!-- Navigation Sidebar -->
+        <aside class="side-menu d-flex flex-column">
+            <div class="brand-section d-flex align-items-center">
+                <div class="app-brand d-flex align-items-center gap-2">
+                    <div class="bg-primary text-white rounded p-1 d-flex justify-content-center align-items-center"
+                        style="width: 32px; height: 32px;">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <div>
+                        <h5 class="m-0 fw-bold text-dark">Nova</h5>
+                        <small class="text-muted" style="font-size: 0.75rem;">Financial</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-3 flex-grow-1">
+                <div class="nav flex-column nav-pills menu-list" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="tab-home" data-bs-toggle="pill" data-bs-target="#view-home"
+                        type="button" role="tab">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="nav-link" id="tab-history" data-bs-toggle="pill" data-bs-target="#view-history"
+                        type="button" role="tab">
+                        <i class="fa-solid fa-right-left"></i>
+                        <span>Transactions</span>
+                    </button>
+                    <button class="nav-link" id="tab-reports" data-bs-toggle="pill" data-bs-target="#view-reports"
+                        type="button" role="tab">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Analytics</span>
+                    </button>
+                    <button class="nav-link" id="tab-wallet" data-bs-toggle="pill" data-bs-target="#view-wallet"
+                        type="button" role="tab">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>My Cards</span>
+                    </button>
+                    <button class="nav-link" id="tab-config" data-bs-toggle="pill" data-bs-target="#view-config"
+                        type="button" role="tab">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-3">
+                <div class="pro-banner text-center">
+                    <div class="pro-icon mx-auto text-white">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h6 class="fw-bold mb-1">Upgrade to Pro</h6>
+                    <p class="small opacity-75 mb-3">Get advanced insights</p>
+                    <button class="btn btn-light btn-sm w-100 fw-bold text-primary border-0">Upgrade Now</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-wrapper w-100">
+
+
+            <!-- Views -->
+            <div class="tab-content p-4" id="v-pills-tabContent">
+
+                <!-- Dashboard View -->
+                <div class="tab-pane fade show active" id="view-home" role="tabpanel">
+
+                    <!-- Header -->
+                    <header
+                        class="top-bar d-flex justify-content-between align-items-center mb-4 sticky-top bg-white border-bottom py-3">
+                        <div>
+                            <h4 class="fw-bold m-0">Good morning, John</h4>
+                            <small class="text-muted">Here's what's happening with your finances</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="search-wrapper d-none d-md-flex">
+                                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <button class="action-btn border-0 bg-transparent">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="notify-badge"></span>
+                            </button>
+                            <div class="d-flex align-items-center gap-2 p-1 rounded hover-bg-light cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                                    class="rounded-circle" width="36" height="36" alt="Profile">
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Stats Grid -->
+                    <div class="row g-4 mb-4">
+                        <!-- Balance -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="info-box highlight h-100 d-flex flex-column justify-content-between">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-wrap bg-white bg-opacity-25 text-white">
+                                        <i class="fa-solid fa-wallet fs-5"></i>
+                                    </div>
+                                    <div class="trend-badge bg-white bg-opacity-25 text-white">
+                                        <i class="fa-solid fa-arrow-trend-up"></i> 2.4%
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="opacity-75 d-block mb-1">Total Balance</small>
+                                    <h3 class="fw-bold m-0">$24,563.89</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Income -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="info-box h-100 d-flex flex-column justify-content-between">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-wrap">
+                                        <i class="fa-solid fa-arrow-down fs-5"></i>
+                                    </div>
+                                    <div class="trend-badge trend-up">
+                                        <i class="fa-solid fa-arrow-trend-up"></i> 8.2%
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block mb-1">Income</small>
+                                    <h3 class="fw-bold m-0">$8,249.50</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expenses -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="info-box h-100 d-flex flex-column justify-content-between">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-wrap">
+                                        <i class="fa-solid fa-arrow-up fs-5"></i>
+                                    </div>
+                                    <div class="trend-badge trend-down">
+                                        <i class="fa-solid fa-arrow-trend-down"></i> 3.1%
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block mb-1">Expenses</small>
+                                    <h3 class="fw-bold m-0">$3,842.75</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Savings -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="info-box h-100 d-flex flex-column justify-content-between">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="icon-wrap">
+                                        <i class="fa-solid fa-piggy-bank fs-5"></i>
+                                    </div>
+                                    <div class="trend-badge trend-up">
+                                        <i class="fa-solid fa-arrow-trend-up"></i> 5.8%
+                                    </div>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block mb-1">Savings</small>
+                                    <h3 class="fw-bold m-0">$12,450.00</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Charts Row -->
+                    <div class="row g-4 mb-4">
+                        <!-- Spending Activity (Line Chart) -->
+                        <div class="col-12 col-lg-8">
+                            <div class="info-box">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <h6 class="fw-bold m-0">Spending Activity</h6>
+                                        <small class="text-muted">Last 7 days</small>
+                                    </div>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-secondary active">Week</button>
+                                        <button type="button" class="btn btn-outline-secondary">Month</button>
+                                    </div>
+                                </div>
+                                <div class="w-100 position-relative" style="height: 250px;">
+                                    <!-- Static SVG Line Chart Replacement -->
+                                    <svg viewBox="0 0 700 250" class="w-100 h-100 overflow-visible">
+                                        <!-- Grid Lines -->
+                                        <line x1="0" y1="200" x2="700" y2="200" stroke="#e2e8f0" stroke-width="1" />
+                                        <line x1="0" y1="150" x2="700" y2="150" stroke="#e2e8f0" stroke-width="1"
+                                            stroke-dasharray="4" />
+                                        <line x1="0" y1="100" x2="700" y2="100" stroke="#e2e8f0" stroke-width="1"
+                                            stroke-dasharray="4" />
+                                        <line x1="0" y1="50" x2="700" y2="50" stroke="#e2e8f0" stroke-width="1"
+                                            stroke-dasharray="4" />
+
+                                        <!-- Area Fill -->
+                                        <path
+                                            d="M0,200 L50,150 L150,170 L250,80 L350,120 L450,40 L550,160 L650,190 L700,200 Z"
+                                            fill="rgba(59, 130, 246, 0.1)" stroke="none" />
+
+                                        <!-- Line -->
+                                        <polyline points="50,150 150,170 250,80 350,120 450,40 550,160 650,190"
+                                            fill="none" stroke="#3b82f6" stroke-width="3" />
+
+                                        <!-- Points -->
+                                        <circle cx="50" cy="150" r="4" fill="#3b82f6" stroke="white" stroke-width="2" />
+                                        <circle cx="150" cy="170" r="4" fill="#3b82f6" stroke="white"
+                                            stroke-width="2" />
+                                        <circle cx="250" cy="80" r="4" fill="#3b82f6" stroke="white" stroke-width="2" />
+                                        <circle cx="350" cy="120" r="4" fill="#3b82f6" stroke="white"
+                                            stroke-width="2" />
+                                        <circle cx="450" cy="40" r="4" fill="#3b82f6" stroke="white" stroke-width="2" />
+                                        <circle cx="550" cy="160" r="4" fill="#3b82f6" stroke="white"
+                                            stroke-width="2" />
+                                        <circle cx="650" cy="190" r="4" fill="#3b82f6" stroke="white"
+                                            stroke-width="2" />
+
+                                        <!-- Labels -->
+                                        <text x="50" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Mon</text>
+                                        <text x="150" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Tue</text>
+                                        <text x="250" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Wed</text>
+                                        <text x="350" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Thu</text>
+                                        <text x="450" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Fri</text>
+                                        <text x="550" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Sat</text>
+                                        <text x="650" y="230" text-anchor="middle" fill="#64748b"
+                                            font-size="12">Sun</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Action (Transfer) -->
+                        <div class="col-12 col-lg-4">
+                            <div class="info-box">
+                                <h6 class="fw-bold mb-3">Quick Transfer</h6>
+
+                                <div class="avatar-stack mb-4">
+                                    <div class="avatar-item">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                                            class="avatar-img" alt="Sarah">
+                                        <span class="small text-muted">Sarah</span>
+                                    </div>
+                                    <div class="avatar-item">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                                            class="avatar-img" alt="Mike">
+                                        <span class="small text-muted">Mike</span>
+                                    </div>
+                                    <div class="avatar-item">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+                                            class="avatar-img" alt="Emma">
+                                        <span class="small text-muted">Emma</span>
+                                    </div>
+                                    <div class="avatar-item">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+                                            class="avatar-img" alt="David">
+                                        <span class="small text-muted">David</span>
+                                    </div>
+                                    <div class="avatar-item">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop"
+                                            class="avatar-img" alt="Lisa">
+                                        <span class="small text-muted">Lisa</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0 text-muted">$</span>
+                                        <input type="number" class="form-control bg-light border-start-0 ps-0"
+                                            placeholder="0.00">
+                                    </div>
+                                    <button
+                                        class="btn btn-primary d-flex align-items-center justify-content-center p-3 rounded-3"
+                                        style="width: 46px; height: 46px;">
+                                        <i class="fa-regular fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Table -->
+                    <div class="info-box">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="fw-bold m-0">Recent Transactions</h6>
+
+                            <a href="#" id="viewAllBtn"
+                                class="btn btn-link p-0 text-decoration-none small fw-bold">
+                                    View All <i class="fa-solid fa-chevron-right ms-1" style="font-size: 0.75rem;"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="list-group-custom">
+                            <!-- Item 1 -->
+                            <div class="list-item">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-wrap bg-primary bg-opacity-10 text-primary rounded-3"
+                                        style="width: 44px; height: 44px;">
+                                        <i class="fa-brands fa-apple"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="m-0 fw-bold" style="font-size: 0.9rem;">Apple Store</h6>
+                                        <small class="text-muted" style="font-size: 0.75rem;">Jan 15, 10:30 AM</small>
+                                    </div>
+                                </div>
+                                <span class="fw-bold text-dark">-$999.00</span>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="list-item">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-wrap bg-success bg-opacity-10 text-success rounded-3"
+                                        style="width: 44px; height: 44px;">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="m-0 fw-bold" style="font-size: 0.9rem;">Salary Deposit</h6>
+                                        <small class="text-muted" style="font-size: 0.75rem;">Jan 15, 9:00 AM</small>
+                                    </div>
+                                </div>
+                                <span class="fw-bold text-success">+$5,200.00</span>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="list-item">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-wrap bg-warning bg-opacity-10 text-warning rounded-3"
+                                        style="width: 44px; height: 44px;">
+                                        <i class="fa-solid fa-utensils"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="m-0 fw-bold" style="font-size: 0.9rem;">Uber Eats</h6>
+                                        <small class="text-muted" style="font-size: 0.75rem;">Jan 14, 7:45 PM</small>
+                                    </div>
+                                </div>
+                                <span class="fw-bold text-dark">-$32.50</span>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="list-item">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-wrap bg-secondary bg-opacity-10 text-secondary rounded-3"
+                                        style="width: 44px; height: 44px;">
+                                        <i class="fa-solid fa-film"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="m-0 fw-bold" style="font-size: 0.9rem;">Netflix</h6>
+                                        <small class="text-muted" style="font-size: 0.75rem;">Jan 14, 12:00 AM</small>
+                                    </div>
+                                </div>
+                                <span class="fw-bold text-dark">-$15.99</span>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="list-item">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="icon-wrap bg-info bg-opacity-10 text-info rounded-3"
+                                        style="width: 44px; height: 44px;">
+                                        <i class="fa-solid fa-gas-pump"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="m-0 fw-bold" style="font-size: 0.9rem;">Shell Gas Station</h6>
+                                        <small class="text-muted" style="font-size: 0.75rem;">Jan 13, 4:20 PM</small>
+                                    </div>
+                                </div>
+                                <span class="fw-bold text-dark">-$65.40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transactions View -->
+                <div class="tab-pane fade" id="view-history" role="tabpanel">
+
+                    <!-- Header -->
+                    <header
+                        class="top-bar d-flex justify-content-between align-items-center mb-4 sticky-top bg-white border-bottom py-3">
+                        <div>
+                            <h4 class="fw-bold m-0">Transactions</h4>
+                            <small class="text-muted">Track all your financial activity</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="search-wrapper d-none d-md-flex">
+                                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <button class="action-btn border-0 bg-transparent">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="notify-badge"></span>
+                            </button>
+                            <div class="d-flex align-items-center gap-2 p-1 rounded hover-bg-light cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                                    class="rounded-circle" width="36" height="36" alt="Profile">
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Tabs & Filters Row -->
+                    <div class="d-flex align-items-center mb-4 gap-3">
+                        <!-- Search (Big) -->
+                        <div class="search-wrapper flex-grow-1" style="max-width: 400px;">
+                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                            <input type="text" placeholder="Search merchant or amount...">
+                        </div>
+
+                        <!-- Filters + More Button -->
+                        <div class="d-flex align-items-center gap-3 ms-auto">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-all" type="button" role="tab">All</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-income-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-income" type="button" role="tab">Income</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-expense-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-expense" type="button" role="tab">Expense</button>
+                                </li>
+                            </ul>
+
+                            <button class="btn btn-outline-secondary d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-filter"></i> More Filters
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <!-- All Transactions -->
+                        <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
+                            <div class="info-box p-0 overflow-hidden">
+                                <div class="list-group list-group-flush">
+
+                                    <!-- List Item: Apple Store -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;">
+                                                <i class="fa-brands fa-apple"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Apple Store</h6>
+                                                <small class="text-muted">Jan 15, 10:30 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-shop d-none d-md-inline-block">Shopping</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$999.00</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- List Item: Salary -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(22, 163, 74, 0.1); color: #16a34a;">
+                                                <i class="fa-solid fa-briefcase"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Salary Deposit</h6>
+                                                <small class="text-muted">Jan 15, 9:00 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-income d-none d-md-inline-block">Income</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold text-success"
+                                                style="min-width: 80px; text-align: right;">+$5,200.00</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- List Item: Uber Eats -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                                                <i class="fa-solid fa-burger"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Uber Eats</h6>
+                                                <small class="text-muted">Jan 14, 7:45 PM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-food d-none d-md-inline-block">Food</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$32.50</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- List Item: Netflix -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+                                                <i class="fa-solid fa-gamepad"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Netflix</h6>
+                                                <small class="text-muted">Jan 14, 12:00 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span
+                                                class="category-tag tag-ent d-none d-md-inline-block">Entertainment</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$15.99</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- List Item: Shell -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(6, 182, 212, 0.1); color: #06b6d4;">
+                                                <i class="fa-solid fa-gas-pump"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Shell Gas Station</h6>
+                                                <small class="text-muted">Jan 13, 4:20 PM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span
+                                                class="category-tag d-none d-md-inline-block bg-info bg-opacity-10 text-info">Transport</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$65.40</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- List Item: Whole Foods -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Whole Foods</h6>
+                                                <small class="text-muted">Jan 13, 11:00 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span
+                                                class="category-tag d-none d-md-inline-block bg-danger bg-opacity-10 text-danger">Groceries</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$127.83</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- List Item: Freelance -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(22, 163, 74, 0.1); color: #16a34a;">
+                                                <i class="fa-solid fa-laptop-code"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Freelance Payment</h6>
+                                                <small class="text-muted">Jan 12, 2:30 PM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-income d-none d-md-inline-block">Income</span>
+                                            <span
+                                                class="badge bg-warning bg-opacity-10 text-warning rounded-pill d-none d-md-inline-block">Pending</span>
+                                            <span class="fw-bold text-success"
+                                                style="min-width: 80px; text-align: right;">+$1,500.00</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Income -->
+                        <div class="tab-pane fade" id="pills-income" role="tabpanel">
+                            <div class="info-box p-0 overflow-hidden">
+                                <div class="list-group list-group-flush">
+                                    <!-- Salary -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(22, 163, 74, 0.1); color: #16a34a;">
+                                                <i class="fa-solid fa-briefcase"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Salary Deposit</h6><small class="text-muted">Jan
+                                                    15, 9:00 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-income d-none d-md-inline-block">Income</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold text-success"
+                                                style="min-width: 80px; text-align: right;">+$5,200.00</span>
+                                        </div>
+                                    </div>
+                                    <!-- Freelance -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(22, 163, 74, 0.1); color: #16a34a;">
+                                                <i class="fa-solid fa-laptop-code"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Freelance Payment</h6><small
+                                                    class="text-muted">Jan 12, 2:30 PM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-income d-none d-md-inline-block">Income</span>
+                                            <span
+                                                class="badge bg-warning bg-opacity-10 text-warning rounded-pill d-none d-md-inline-block">Pending</span>
+                                            <span class="fw-bold text-success"
+                                                style="min-width: 80px; text-align: right;">+$1,500.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expense Only -->
+                        <div class="tab-pane fade" id="pills-expense" role="tabpanel">
+                            <div class="info-box p-0 overflow-hidden">
+                                <div class="list-group list-group-flush">
+                                    <!-- Apple Store -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;">
+                                                <i class="fa-brands fa-apple"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Apple Store</h6><small class="text-muted">Jan
+                                                    15, 10:30 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-shop d-none d-md-inline-block">Shopping</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$999.00</span>
+                                        </div>
+                                    </div>
+                                    <!-- Uber Eats -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                                                <i class="fa-solid fa-burger"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Uber Eats</h6><small class="text-muted">Jan 14,
+                                                    7:45 PM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span class="category-tag tag-food d-none d-md-inline-block">Food</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$32.50</span>
+                                        </div>
+                                    </div>
+                                    <!-- Netflix -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+                                                <i class="fa-solid fa-gamepad"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Netflix</h6><small class="text-muted">Jan 14,
+                                                    12:00 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span
+                                                class="category-tag tag-ent d-none d-md-inline-block">Entertainment</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$15.99</span>
+                                        </div>
+                                    </div>
+                                    <!-- Shell -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(6, 182, 212, 0.1); color: #06b6d4;">
+                                                <i class="fa-solid fa-gas-pump"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Shell Gas Station</h6><small
+                                                    class="text-muted">Jan 13, 4:20 PM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span
+                                                class="category-tag d-none d-md-inline-block bg-info bg-opacity-10 text-info">Transport</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$65.40</span>
+                                        </div>
+                                    </div>
+                                    <!-- Whole Foods -->
+                                    <div class="list-group-item p-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-wrap"
+                                                style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Whole Foods</h6><small class="text-muted">Jan
+                                                    13, 11:00 AM</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4">
+                                            <span
+                                                class="category-tag d-none d-md-inline-block bg-danger bg-opacity-10 text-danger">Groceries</span>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success rounded-pill d-none d-md-inline-block">Completed</span>
+                                            <span class="fw-bold"
+                                                style="min-width: 80px; text-align: right;">-$127.83</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Analytics View -->
+                <div class="tab-pane fade" id="view-reports" role="tabpanel">
+
+                    <!-- Header -->
+                    <header
+                        class="top-bar d-flex justify-content-between align-items-center mb-4 sticky-top bg-white border-bottom py-3">
+                        <div>
+                            <h4 class="fw-bold m-0">Analytics</h4>
+                            <small class="text-muted">Insights into your spending habits</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="search-wrapper d-none d-md-flex">
+                                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <button class="action-btn border-0 bg-transparent">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="notify-badge"></span>
+                            </button>
+                            <div class="d-flex align-items-center gap-2 p-1 rounded hover-bg-light cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                                    class="rounded-circle" width="36" height="36" alt="Profile">
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="row g-4">
+                        <!-- Pie Chart Replacement -->
+                        <div class="col-12 col-lg-6">
+                            <div class="info-box">
+                                <h6 class="fw-bold mb-4">Spending by Category</h6>
+                                <div class="d-flex flex-column align-items-center">
+                                    <!-- CSS Conic Gradient Donut Chart -->
+                                    <div class="position-relative mb-4" style="width: 200px; height: 200px; border-radius: 50%; 
+                                        background: conic-gradient(
+                                            #3b82f6 0% 35%, 
+                                            #f59e0b 35% 55%, 
+                                            #16a34a 55% 70%, 
+                                            #8b5cf6 70% 80%, 
+                                            #ef4444 80% 95%, 
+                                            #06b6d4 95% 100%
+                                        );">
+                                        <div class="position-absolute top-50 start-50 translate-middle bg-white rounded-circle"
+                                            style="width: 140px; height: 140px;"></div>
+                                    </div>
+
+                                    <!-- Legend -->
+                                    <div class="row w-100 g-3">
+                                        <div class="col-6 d-flex justify-content-between align-items-center small">
+                                            <span class="d-flex align-items-center gap-2"><span class="rounded-circle"
+                                                    style="width: 10px; height: 10px; background: #3b82f6;"></span>
+                                                Shopping</span>
+                                            <span class="fw-bold">35%</span>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-between align-items-center small">
+                                            <span class="d-flex align-items-center gap-2"><span class="rounded-circle"
+                                                    style="width: 10px; height: 10px; background: #f59e0b;"></span>
+                                                Food</span>
+                                            <span class="fw-bold">20%</span>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-between align-items-center small">
+                                            <span class="d-flex align-items-center gap-2"><span class="rounded-circle"
+                                                    style="width: 10px; height: 10px; background: #16a34a;"></span>
+                                                Transport</span>
+                                            <span class="fw-bold">15%</span>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-between align-items-center small">
+                                            <span class="d-flex align-items-center gap-2"><span class="rounded-circle"
+                                                    style="width: 10px; height: 10px; background: #8b5cf6;"></span>
+                                                Entert...</span>
+                                            <span class="fw-bold">10%</span>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-between align-items-center small">
+                                            <span class="d-flex align-items-center gap-2"><span class="rounded-circle"
+                                                    style="width: 10px; height: 10px; background: #ef4444;"></span>
+                                                Bills</span>
+                                            <span class="fw-bold">15%</span>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-between align-items-center small">
+                                            <span class="d-flex align-items-center gap-2"><span class="rounded-circle"
+                                                    style="width: 10px; height: 10px; background: #06b6d4;"></span>
+                                                Health</span>
+                                            <span class="fw-bold">5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Budget Progress -->
+                        <div class="col-12 col-lg-6">
+                            <div class="info-box h-100">
+                                <h6 class="fw-bold mb-4">Monthly Budget</h6>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="fw-bold">Shopping</span>
+                                        <span class="text-muted">$1250 / $1500</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 83%">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="fw-bold">Food & Dining</span>
+                                        <span class="text-muted">$680 / $800</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="fw-bold">Transport</span>
+                                        <span class="text-muted text-danger">$420 / $400</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%">
+                                        </div>
+                                    </div>
+                                    <small class="text-danger mt-1 d-block">Over budget by $20</small>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="fw-bold">Entertainment</span>
+                                        <span class="text-muted">$280 / $300</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" role="progressbar"
+                                            style="width: 93%; background: #8b5cf6;"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="fw-bold">Bills & Utilities</span>
+                                        <span class="text-muted">$890 / $1000</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 89%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bar Chart Replacement (Income vs Expense) -->
+                        <div class="col-12">
+                            <div class="info-box">
+                                <h6 class="fw-bold mb-4">Income vs Expenses</h6>
+                                <div class="d-flex align-items-end justify-content-between px-2" style="height: 200px;">
+
+                                    <!-- Month 1 -->
+                                    <div class="d-flex gap-1 align-items-end h-100" style="width: 12%;">
+                                        <div class="w-50 bg-success rounded-top" style="height: 75%;"></div>
+                                        <div class="w-50 bg-danger rounded-top" style="height: 46%;"></div>
+                                    </div>
+
+                                    <!-- Month 2 -->
+                                    <div class="d-flex gap-1 align-items-end h-100" style="width: 12%;">
+                                        <div class="w-50 bg-success rounded-top" style="height: 86%;"></div>
+                                        <div class="w-50 bg-danger rounded-top" style="height: 51%;"></div>
+                                    </div>
+
+                                    <!-- Month 3 -->
+                                    <div class="d-flex gap-1 align-items-end h-100" style="width: 12%;">
+                                        <div class="w-50 bg-success rounded-top" style="height: 82%;"></div>
+                                        <div class="w-50 bg-danger rounded-top" style="height: 43%;"></div>
+                                    </div>
+
+                                    <!-- Month 4 -->
+                                    <div class="d-flex gap-1 align-items-end h-100" style="width: 12%;">
+                                        <div class="w-50 bg-success rounded-top" style="height: 90%;"></div>
+                                        <div class="w-50 bg-danger rounded-top" style="height: 49%;"></div>
+                                    </div>
+
+                                    <!-- Month 5 -->
+                                    <div class="d-flex gap-1 align-items-end h-100" style="width: 12%;">
+                                        <div class="w-50 bg-success rounded-top" style="height: 99%;"></div>
+                                        <div class="w-50 bg-danger rounded-top" style="height: 58%;"></div>
+                                    </div>
+
+                                    <!-- Month 6 -->
+                                    <div class="d-flex gap-1 align-items-end h-100" style="width: 12%;">
+                                        <div class="w-50 bg-success rounded-top" style="height: 100%;"></div>
+                                        <div class="w-50 bg-danger rounded-top" style="height: 46%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between text-muted small mt-2 px-2">
+                                    <span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-4 mt-3">
+                                    <div class="small d-flex align-items-center gap-2"><span class="rounded-circle"
+                                            style="width: 10px; height: 10px; background: var(--success-color);"></span>
+                                        Income</div>
+                                    <div class="small d-flex align-items-center gap-2"><span class="rounded-circle"
+                                            style="width: 10px; height: 10px; background: var(--danger-color);"></span>
+                                        Expenses</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subscriptions -->
+                        <div class="col-12">
+                            <div class="info-box">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="fw-bold m-0">Recurring Subscriptions</h6>
+                                    <small class="text-muted">$1,933.96/mo</small>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="icon-wrap bg-primary bg-opacity-10 text-primary"
+                                                style="width: 40px; height: 40px;">
+                                                <i class="fa-solid fa-note-sticky"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Netflix</h6><small class="text-muted">Next: Jan
+                                                    20</small>
+                                            </div>
+                                        </div>
+                                        <span class="fw-bold">$15.99</span>
+                                    </div>
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="icon-wrap bg-primary bg-opacity-10 text-primary"
+                                                style="width: 40px; height: 40px;">
+                                                <i class="fa-brands fa-spotify"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Spotify</h6><small class="text-muted">Next: Jan
+                                                    22</small>
+                                            </div>
+                                        </div>
+                                        <span class="fw-bold">$9.99</span>
+                                    </div>
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="icon-wrap bg-primary bg-opacity-10 text-primary"
+                                                style="width: 40px; height: 40px;">
+                                                <i class="fa-solid fa-cloud"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">iCloud</h6><small class="text-muted">Next: Jan
+                                                    25</small>
+                                            </div>
+                                        </div>
+                                        <span class="fw-bold">$2.99</span>
+                                    </div>
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="icon-wrap bg-primary bg-opacity-10 text-primary"
+                                                style="width: 40px; height: 40px;">
+                                                <i class="fa-solid fa-pen-nib"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Adobe CC</h6><small class="text-muted">Next: Feb
+                                                    1</small>
+                                            </div>
+                                        </div>
+                                        <span class="fw-bold">$54.99</span>
+                                    </div>
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="icon-wrap bg-primary bg-opacity-10 text-primary"
+                                                style="width: 40px; height: 40px;">
+                                                <i class="fa-solid fa-house-chimney"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="m-0 fw-bold">Rent</h6><small class="text-muted">Next: Feb
+                                                    1</small>
+                                            </div>
+                                        </div>
+                                        <span class="fw-bold">$1850.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards View -->
+                <div class="tab-pane fade" id="view-wallet" role="tabpanel">
+
+                    <!-- Header -->
+                    <header
+                        class="top-bar d-flex justify-content-between align-items-center mb-4 sticky-top bg-white border-bottom py-3">
+                        <div>
+                            <h4 class="fw-bold m-0">My Cards</h4>
+                            <small class="text-muted">Manage your payment methods</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="search-wrapper d-none d-md-flex">
+                                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <button class="action-btn border-0 bg-transparent">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="notify-badge"></span>
+                            </button>
+                            <div class="d-flex align-items-center gap-2 p-1 rounded hover-bg-light cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                                    class="rounded-circle" width="36" height="36" alt="Profile">
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Card Carousel (Centered & Constrained) -->
+                    <div class="d-flex justify-content-center mb-5">
+                        <div id="cardCarousel" class="carousel slide w-100" data-bs-ride="false"
+                            style="max-width: 380px;">
+                            <div class="carousel-indicators" style="bottom: -40px;">
+                                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0"
+                                    class="active bg-dark" aria-current="true" aria-label="Card 1"></button>
+                                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"
+                                    class="bg-dark" aria-label="Card 2"></button>
+                                <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"
+                                    class="bg-dark" aria-label="Card 3"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                                <!-- Card 1 -->
+                                <div class="carousel-item active">
+                                    <div class="wallet-card d-flex flex-column justify-content-between">
+                                        <div class="wc-glass"></div>
+                                        <div
+                                            class="position-relative z-1 d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <small class="opacity-75">Current Balance</small>
+                                                <h3 class="fw-bold m-0">$12,450.00</h3>
+                                            </div>
+                                            <i class="fa-brands fa-cc-visa fs-1 opacity-75"></i>
+                                        </div>
+                                        <div
+                                            class="position-relative z-1 d-flex justify-content-between align-items-end">
+                                            <div>
+                                                <p class="mb-1" style="letter-spacing: 2px;">•••• •••• •••• 4532</p>
+                                                <small class="opacity-75">John Doe</small>
+                                            </div>
+                                            <div class="text-end">
+                                                <small class="opacity-75 d-block" style="font-size: 0.7rem;">EXP</small>
+                                                <span class="fw-bold">12/26</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="carousel-item">
+                                    <div class="wallet-card d-flex flex-column justify-content-between"
+                                        style="background: linear-gradient(135deg, #16a34a, #06b6d4);">
+                                        <div class="wc-glass"></div>
+                                        <div
+                                            class="position-relative z-1 d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <small class="opacity-75">Current Balance</small>
+                                                <h3 class="fw-bold m-0">$3,800.50</h3>
+                                            </div>
+                                            <i class="fa-brands fa-cc-mastercard fs-1 opacity-75"></i>
+                                        </div>
+                                        <div
+                                            class="position-relative z-1 d-flex justify-content-between align-items-end">
+                                            <div>
+                                                <p class="mb-1" style="letter-spacing: 2px;">•••• •••• •••• 8821</p>
+                                                <small class="opacity-75">John Doe</small>
+                                            </div>
+                                            <div class="text-end">
+                                                <small class="opacity-75 d-block" style="font-size: 0.7rem;">EXP</small>
+                                                <span class="fw-bold">09/25</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="carousel-item">
+                                    <div class="wallet-card d-flex flex-column justify-content-between"
+                                        style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                                        <div class="wc-glass"></div>
+                                        <div
+                                            class="position-relative z-1 d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <small class="opacity-75">Current Balance</small>
+                                                <h3 class="fw-bold m-0">$1,200.00</h3>
+                                            </div>
+                                            <i class="fa-brands fa-cc-amex fs-1 opacity-75"></i>
+                                        </div>
+                                        <div
+                                            class="position-relative z-1 d-flex justify-content-between align-items-end">
+                                            <div>
+                                                <p class="mb-1" style="letter-spacing: 2px;">•••• •••• •••• 9002</p>
+                                                <small class="opacity-75">John Doe</small>
+                                            </div>
+                                            <div class="text-end">
+                                                <small class="opacity-75 d-block" style="font-size: 0.7rem;">EXP</small>
+                                                <span class="fw-bold">05/27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel"
+                                data-bs-slide="prev" style="left: -50px;">
+                                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"
+                                    style="background-size: 50%;"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel"
+                                data-bs-slide="next" style="right: -50px;">
+                                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"
+                                    style="background-size: 50%;"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Layout: 2 Columns for Settings & Details -->
+                    <div class="row g-4">
+                        <!-- Left Col: Card Settings -->
+                        <div class="col-12 col-md-6">
+                            <div class="info-box h-100 d-flex flex-column">
+                                <h6 class="fw-bold mb-4">Card Settings</h6>
+
+                                <!-- Freeze Card -->
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="icon-wrap bg-danger bg-opacity-10 text-danger">
+                                            <i class="fa-solid fa-snowflake"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="m-0 fw-bold">Freeze Card</h6>
+                                            <small class="text-muted">Temporarily disable card</small>
+                                        </div>
+                                    </div>
+                                    <label class="custom-switch">
+                                        <input type="checkbox" id="freeze-toggle">
+                                        <div class="switch-knob"></div>
+                                    </label>
+                                </div>
+
+                                <!-- Online Payments -->
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="icon-wrap bg-primary bg-opacity-10 text-primary">
+                                            <i class="fa-solid fa-globe"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="m-0 fw-bold">Online Payments</h6>
+                                            <small class="text-muted">Allow online transactions</small>
+                                        </div>
+                                    </div>
+                                    <label class="custom-switch">
+                                        <input type="checkbox" checked>
+                                        <div class="switch-knob"></div>
+                                    </label>
+                                </div>
+
+                                <!-- Contactless -->
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="icon-wrap bg-success bg-opacity-10 text-success">
+                                            <i class="fa-solid fa-wifi"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="m-0 fw-bold">Contactless</h6>
+                                            <small class="text-muted">Enable tap to pay</small>
+                                        </div>
+                                    </div>
+                                    <label class="custom-switch">
+                                        <input type="checkbox" checked>
+                                        <div class="switch-knob"></div>
+                                    </label>
+                                </div>
+
+                                <!-- Daily Spending Limit Slider -->
+                                <div class="mt-auto pt-3 border-top border-light">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="fw-bold m-0 small">Daily Spending Limit</h6>
+                                        <span class="text-primary fw-bold small">$2,500</span>
+                                    </div>
+                                    <input type="range" class="form-range" min="0" max="10000" step="100" value="2500">
+                                    <div class="d-flex justify-content-between text-muted" style="font-size: 0.7rem;">
+                                        <span>$0</span>
+                                        <span>$10,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Col: Card Details -->
+                        <div class="col-12 col-md-6">
+                            <div class="info-box h-100">
+                                <h6 class="fw-bold mb-4">Card Details</h6>
+
+                                <div class="list-group list-group-flush">
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent border-bottom">
+                                        <span class="text-muted">Card Type</span>
+                                        <span class="fw-bold">Visa</span>
+                                    </div>
+
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent border-bottom">
+                                        <span class="text-muted">Card Number</span>
+                                        <span class="fw-bold">•••• 4532</span>
+                                    </div>
+
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent border-bottom">
+                                        <span class="text-muted">Expiry Date</span>
+                                        <span class="fw-bold">12/26</span>
+                                    </div>
+
+                                    <div
+                                        class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center bg-transparent">
+                                        <span class="text-muted">Status</span>
+                                        <span
+                                            class="badge bg-success bg-opacity-10 text-success rounded-pill px-3">Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Settings View -->
+                <div class="tab-pane fade" id="view-config" role="tabpanel">
+
+                    <!-- Header -->
+                    <header
+                        class="top-bar d-flex justify-content-between align-items-center mb-4 sticky-top bg-white border-bottom py-3">
+                        <div>
+                            <h4 class="fw-bold m-0">Settings</h4>
+                            <small class="text-muted">Manage your preferences</small>
+                        </div>
+                    </header>
+
+                    <!-- Profile Section (Restored) -->
+                    <div class="info-box mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop"
+                                class="rounded-circle" width="60" height="60" alt="Profile">
+                            <div>
+                                <h5 class="fw-bold m-0">John Doe</h5>
+                                <small class="text-muted">Premium Member</small>
+                            </div>
+                            <i class="fa-solid fa-chevron-down ms-auto text-muted"></i>
+                        </div>
+                    </div>
+
+                    <!-- Account Section -->
+                    <div class="info-box mb-4">
+                        <h6 class="fw-bold mb-4">Account</h6>
+                        <div class="list-group list-group-flush">
+                            <a href="#"
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center text-decoration-none text-dark border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-regular fa-user text-muted fs-5"></i>
+                                    <div>
+                                        <h6 class="m-0 fw-bold">Personal Information</h6>
+                                        <small class="text-muted">Profile and contact details</small>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-muted small"></i>
+                            </a>
+                            <a href="#"
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center text-decoration-none text-dark border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-solid fa-shield-halved text-muted fs-5"></i>
+                                    <div>
+                                        <h6 class="m-0 fw-bold">Security & Privacy</h6>
+                                        <small class="text-muted">Password and 2FA</small>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-muted small"></i>
+                            </a>
+                            <a href="#"
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center text-decoration-none text-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-regular fa-credit-card text-muted fs-5"></i>
+                                    <div>
+                                        <h6 class="m-0 fw-bold">Payment Methods</h6>
+                                        <small class="text-muted">Manage linked cards</small>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-muted small"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Section -->
+                    <div class="info-box mb-4">
+                        <h6 class="fw-bold mb-4">Preferences</h6>
+                        <div class="list-group list-group-flush">
+                            <div
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-regular fa-bell text-muted fs-5"></i>
+                                    <div>
+                                        <h6 class="m-0 fw-bold">Notifications</h6>
+                                        <small class="text-muted">Email and push alerts</small>
+                                    </div>
+                                </div>
+                                <label class="custom-switch">
+                                    <input type="checkbox" checked>
+                                    <div class="switch-knob"></div>
+                                </label>
+                            </div>
+                            <div
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-regular fa-moon text-muted fs-5"></i>
+                                    <div>
+                                        <h6 class="m-0 fw-bold">Dark Mode</h6>
+                                        <small class="text-muted">Switch theme</small>
+                                    </div>
+                                </div>
+                                <label class="custom-switch">
+                                    <input type="checkbox">
+                                    <div class="switch-knob"></div>
+                                </label>
+                            </div>
+                            <a href="#"
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center text-decoration-none text-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-solid fa-globe text-muted fs-5"></i>
+                                    <div>
+                                        <h6 class="m-0 fw-bold">Language</h6>
+                                        <small class="text-muted">English (US)</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-muted small">English</span>
+                                    <i class="fa-solid fa-chevron-right text-muted small"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Support Section -->
+                    <div class="info-box mb-4">
+                        <h6 class="fw-bold mb-4">Support</h6>
+                        <div class="list-group list-group-flush">
+                            <a href="#"
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center text-decoration-none text-dark border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-regular fa-circle-question text-muted fs-5"></i>
+                                    <h6 class="m-0 fw-bold">Help Center</h6>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-muted small"></i>
+                            </a>
+                            <a href="#"
+                                class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center text-decoration-none text-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-solid fa-lock text-muted fs-5"></i>
+                                    <h6 class="m-0 fw-bold">Privacy Policy</h6>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-muted small"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Log Out Button -->
+                    <div class="info-box">
+                        <button
+                            class="w-100 btn btn-outline-danger fw-bold py-3 d-flex justify-content-center align-items-center gap-2">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Mobile Bottom Nav -->
+        <nav class="bottom-nav d-md-none">
+            <div class="nav nav-pills nav-justified" id="mobile-tabs" role="tablist">
+                <button class="nav-link active py-2" data-bs-target="#view-home" data-bs-toggle="pill">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-house mb-1"></i>
+                        <span style="font-size: 10px;">Home</span>
+                    </div>
+                </button>
+                <button class="nav-link py-2" data-bs-target="#view-history" data-bs-toggle="pill">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-right-left mb-1"></i>
+                        <span style="font-size: 10px;">Txns</span>
+                    </div>
+                </button>
+                <button class="nav-link py-2" data-bs-target="#view-reports" data-bs-toggle="pill">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-chart-pie mb-1"></i>
+                        <span style="font-size: 10px;">Stats</span>
+                    </div>
+                </button>
+                <button class="nav-link py-2" data-bs-target="#view-wallet" data-bs-toggle="pill">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-credit-card mb-1"></i>
+                        <span style="font-size: 10px;">Cards</span>
+                    </div>
+                </button>
+                <button class="nav-link py-2" data-bs-target="#view-config" data-bs-toggle="pill">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-gear mb-1"></i>
+                        <span style="font-size: 10px;">Settings</span>
+                    </div>
+                </button>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
